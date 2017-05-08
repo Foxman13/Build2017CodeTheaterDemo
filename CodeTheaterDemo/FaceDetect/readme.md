@@ -1,11 +1,3 @@
-﻿# QueueTrigger - C<span>#</span>
+﻿#Using a QueueTrigger Function for Face detection and storage
 
-The `QueueTrigger` makes it incredibly easy to react to new Queues inside of Azure Queue Storage. This sample demonstrates a simple use case of processing data from a given Queue using C#.
-
-## How it works
-
-For a `QueueTrigger` to work, you must provide a queue name that defines the queue messages will be read from.
-
-## Learn more
-
-<TODO> Documentation
+Sometimes you don't want to call an API directly from your application, but rather upload an image and have it processed for you. In this sample, we use an Azure Function to take an input message from an Azure Queue and then submit the image URL contained within to the Microsoft Cognitive Services Face API. It then gets the results and stores them in a DocumentDB collection.
